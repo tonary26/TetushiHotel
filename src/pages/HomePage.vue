@@ -232,6 +232,11 @@ const closeLightbox = () => {
       ></iframe>
     </section>
 
+    <footer class="site-credit">
+      <span>Сделано командой</span>
+      <a href="https://t.me/DevSpaceWork" target="_blank" rel="noreferrer">DevSpace</a>
+    </footer>
+
     <ImageLightbox
       :images="gallery"
       :index="selectedImageIndex"
