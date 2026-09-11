@@ -96,7 +96,6 @@ const closeLightbox = () => {
       <img src="/images/user/hotel-front.webp" alt="Гостиница «Рай» в Тетюшах" />
       <div class="hero-shade"></div>
       <div class="hero-content">
-        <p class="quiet-line">Тетюши, берег Волги</p>
         <h1>Гостиница «Рай»</h1>
         <p class="hero-copy">Спокойное размещение, номера для одного гостя, семей и рабочих бригад, банные комплексы и прямой звонок владельцу.</p>
         <a class="gold-button booking-button" :href="phoneHref">Забронировать по номеру: {{ phone }}</a>
@@ -108,7 +107,6 @@ const closeLightbox = () => {
 
     <section v-reveal class="intro section">
       <div>
-        <p class="quiet-line">О гостинице</p>
         <h2>Без лишнего шума: выбрать номер, открыть детали, позвонить.</h2>
       </div>
       <p>
@@ -119,7 +117,6 @@ const closeLightbox = () => {
     <section id="included" v-reveal class="section included-section">
       <div class="section-head">
         <div>
-          <p class="quiet-line">Входит в отдых</p>
           <h2>Что доступно гостям на территории</h2>
         </div>
         <p class="section-note">Банные зоны, бильярдная, бассейн и места для отдыха собраны рядом с размещением, чтобы гостю не приходилось искать досуг отдельно.</p>
@@ -152,7 +149,6 @@ const closeLightbox = () => {
     <section id="rooms" v-reveal class="section rooms-section">
       <div class="section-head">
         <div>
-          <p class="quiet-line">Каталог</p>
           <h2>Номера и банные комплексы</h2>
         </div>
         <div class="filters" aria-label="Фильтр размещений">
@@ -195,7 +191,6 @@ const closeLightbox = () => {
     <section id="gallery" v-reveal class="section gallery-section">
       <div class="section-head">
         <div>
-          <p class="quiet-line">Галерея</p>
           <h2>Фотографии отеля внутри и снаружи</h2>
         </div>
       </div>
@@ -208,7 +203,6 @@ const closeLightbox = () => {
 
     <section id="contacts" v-reveal class="section contacts">
       <div>
-        <p class="quiet-line">Контакты</p>
         <h2>Позвоните и уточните свободный номер.</h2>
       </div>
       <div class="contact-panel">
@@ -221,7 +215,6 @@ const closeLightbox = () => {
 
     <section id="map" v-reveal class="map-reveal">
       <div class="map-copy">
-        <p class="quiet-line">Как добраться</p>
         <h2>Гостиница «Рай» на карте</h2>
         <a class="gold-button" href="https://yandex.ru/maps/?text=Тетюши, Чернышевского, 48" target="_blank" rel="noreferrer">Открыть в Яндекс.Картах</a>
       </div>

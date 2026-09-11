@@ -364,12 +364,10 @@ img {
   padding-top: 80px;
 }
 
-.hero-content .quiet-line,
 .hero-content h1,
 .hero-content .hero-copy,
 .hero-content .gold-button,
 .room-hero-copy .back-link,
-.room-hero-copy .quiet-line,
 .room-hero-copy h1,
 .room-hero-copy p,
 .room-hero-copy .gold-button {
@@ -377,8 +375,7 @@ img {
   animation: text-arrive 820ms var(--ease-out-quint) forwards;
 }
 
-.hero-content h1,
-.room-hero-copy .quiet-line {
+.hero-content h1 {
   animation-delay: 90ms;
 }
 
@@ -1147,7 +1144,7 @@ h3 {
   padding: 130px 0 70px;
 }
 
-.room-hero-copy p:not(.quiet-line) {
+.room-hero-copy p {
   max-width: 680px;
   margin: 22px 0 28px;
   font-size: 20px;

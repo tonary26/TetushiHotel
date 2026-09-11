@@ -120,7 +120,6 @@ const scrollRelated = (direction) => {
       </button>
       <div class="room-hero-copy">
         <RouterLink class="back-link" to="/">← Все номера</RouterLink>
-        <p class="quiet-line">{{ room.group }}</p>
         <h1>{{ room.title }}</h1>
         <p>{{ room.description }}</p>
         <div v-if="groupRooms.length > 1" class="room-slide-indicator" aria-label="Текущий номер в разделе">
@@ -137,7 +136,6 @@ const scrollRelated = (direction) => {
 
     <section v-reveal class="section room-detail">
       <div class="room-description">
-        <p class="quiet-line">Описание</p>
         <h2>Что важно знать перед звонком</h2>
         <p>{{ room.details }}</p>
       </div>
@@ -168,7 +166,6 @@ const scrollRelated = (direction) => {
     <section class="section room-gallery-section">
       <div class="section-head">
         <div>
-          <p class="quiet-line">Галерея</p>
           <h2>Фотографии {{ room.title }}</h2>
         </div>
       </div>
@@ -199,7 +196,6 @@ const scrollRelated = (direction) => {
     <section v-reveal class="section related-section">
       <div class="section-head">
         <div>
-          <p class="quiet-line">Еще варианты</p>
           <h2>Еще из раздела «{{ room.group }}»</h2>
         </div>
         <div v-if="related.length > 1" class="related-actions" aria-label="Перемещение по другим размещениям">
