@@ -8,7 +8,7 @@ export const pluralRu = (value, forms) => {
   return forms[2];
 };
 
-export const guestLabel = (value) => `${value} ${pluralRu(value, ['гость', 'гостя', 'гостей'])}`;
+export const guestLabel = (value) => `${value} ${pluralRu(value, ['человек', 'человека', 'человек'])}`;
 
 export const bedLabel = (value) => {
   const count = Number.parseInt(String(value || ''), 10);

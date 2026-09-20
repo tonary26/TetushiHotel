@@ -112,17 +112,17 @@ const scrollRelated = (direction) => {
       @touchcancel.passive="onTouchCancel"
     >
       <img :src="room.image" :alt="room.title" />
-      <button v-if="groupRooms.length > 1" class="room-nav-arrow room-nav-prev" type="button" @click="goToRoom(previousRoom)" :aria-label="`Предыдущее размещение: ${previousRoom.title}`">
+      <button v-if="groupRooms.length > 1" class="room-nav-arrow room-nav-prev" type="button" @click="goToRoom(previousRoom)" :aria-label="`Предыдущий вариант: ${previousRoom.title}`">
         <span>‹</span>
       </button>
-      <button v-if="groupRooms.length > 1" class="room-nav-arrow room-nav-next" type="button" @click="goToRoom(nextRoom)" :aria-label="`Следующее размещение: ${nextRoom.title}`">
+      <button v-if="groupRooms.length > 1" class="room-nav-arrow room-nav-next" type="button" @click="goToRoom(nextRoom)" :aria-label="`Следующий вариант: ${nextRoom.title}`">
         <span>›</span>
       </button>
       <div class="room-hero-copy">
-        <RouterLink class="back-link" to="/">← Все номера</RouterLink>
+        <RouterLink class="back-link" to="/">← Все варианты</RouterLink>
         <h1>{{ room.title }}</h1>
         <p>{{ room.description }}</p>
-        <div v-if="groupRooms.length > 1" class="room-slide-indicator" aria-label="Текущий номер в разделе">
+        <div v-if="groupRooms.length > 1" class="room-slide-indicator" aria-label="Текущий вариант в разделе">
           <span
             v-for="(item, index) in groupRooms"
             :key="item.slug"
@@ -130,13 +130,13 @@ const scrollRelated = (direction) => {
             aria-hidden="true"
           ></span>
         </div>
-        <a class="gold-button booking-button" :href="phoneHref">Забронировать по номеру: {{ phone }}</a>
+        <a class="gold-button booking-button" :href="phoneHref">Позвонить: {{ phone }}</a>
       </div>
     </section>
 
     <section v-reveal class="section room-detail">
       <div class="room-description">
-        <h2>Что важно знать перед звонком</h2>
+        <h2>Что важно знать перед арендой</h2>
         <p>{{ room.details }}</p>
       </div>
       <dl class="feature-list">
@@ -145,7 +145,7 @@ const scrollRelated = (direction) => {
           <dd>{{ priceText }}</dd>
         </div>
         <div>
-          <dt>Гостей</dt>
+          <dt>Человек</dt>
           <dd>до {{ guestLabel(room.max) }}</dd>
         </div>
         <div v-if="!isBathRoom(room) && roomBeds">
@@ -166,7 +166,7 @@ const scrollRelated = (direction) => {
     <section class="section room-gallery-section">
       <div class="section-head">
         <div>
-          <h2>Фотографии {{ room.title }}</h2>
+          <h2>Фотографии: {{ room.title }}</h2>
         </div>
       </div>
       <div
@@ -180,7 +180,7 @@ const scrollRelated = (direction) => {
           type="button"
           @click="openLightbox(index)"
         >
-          <img :src="image" :alt="`${room.title}: фотография номера`" />
+          <img :src="image" :alt="`${room.title}: фотография жилья`" />
         </button>
       </div>
       <div v-if="roomGallery.length > 1" class="room-gallery-indicator" aria-label="Текущая фотография">
@@ -198,7 +198,7 @@ const scrollRelated = (direction) => {
         <div>
           <h2>Еще из раздела «{{ room.group }}»</h2>
         </div>
-        <div v-if="related.length > 1" class="related-actions" aria-label="Перемещение по другим размещениям">
+        <div v-if="related.length > 1" class="related-actions" aria-label="Перемещение по другим вариантам">
           <button type="button" @click="scrollRelated(-1)" aria-label="Назад">‹</button>
           <button type="button" @click="scrollRelated(1)" aria-label="Вперед">›</button>
         </div>

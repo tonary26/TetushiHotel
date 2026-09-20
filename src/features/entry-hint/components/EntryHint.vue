@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
     >
       <div class="entry-hint-content" @click.stop>
         <span class="entry-hint-mark" aria-hidden="true"></span>
-        <p id="entry-hint-title">Нажмите на карточку номера для подробностей</p>
+        <p id="entry-hint-title">Нажмите на карточку варианта для подробностей</p>
         <button ref="closeButton" type="button" @click="close">Понятно</button>
       </div>
     </div>

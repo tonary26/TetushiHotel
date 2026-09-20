@@ -8,7 +8,7 @@ import { roomMetaLabel } from '../features/rooms/lib/labels';
 import ImageLightbox from '../shared/components/ImageLightbox.vue';
 
 const activeGroup = ref('Все');
-const groups = ['Все', 'Стандарт', 'Специальные', 'Бани / Сауны'];
+const groups = ['Все', 'Жильё', 'Особые варианты', 'Бани / Сауны'];
 const selectedImageIndex = ref(-1);
 const includedScroller = ref(null);
 
@@ -93,12 +93,12 @@ const closeLightbox = () => {
     <EntryHint />
 
     <section class="hero">
-      <img src="/images/user/hotel-front.webp" alt="Гостиница «Рай» в Тетюшах" />
+      <img src="/images/user/hotel-front.webp" alt="Аренда жилья «Рай» в Тетюшах" />
       <div class="hero-shade"></div>
       <div class="hero-content">
-        <h1>Гостиница «Рай»</h1>
-        <p class="hero-copy">Спокойное размещение, номера для одного гостя, семей и рабочих бригад, банные комплексы и прямой звонок владельцу.</p>
-        <a class="gold-button booking-button" :href="phoneHref">Забронировать по номеру: {{ phone }}</a>
+        <h1>Аренда жилья «Рай»</h1>
+        <p class="hero-copy">Варианты жилья для одного человека, семей и рабочих бригад, банные комплексы и прямой звонок владельцу.</p>
+        <a class="gold-button booking-button" :href="phoneHref">Позвонить: {{ phone }}</a>
       </div>
       <div class="hero-contact">
         <a :href="phoneHref">{{ phone }}</a>
@@ -107,19 +107,19 @@ const closeLightbox = () => {
 
     <section v-reveal class="intro section">
       <div>
-        <h2>Без лишнего шума: выбрать номер, открыть детали, позвонить.</h2>
+        <h2>Выберите жильё, посмотрите детали и позвоните.</h2>
       </div>
       <p>
-       На сайте собраны актуальные варианты размещения гостиницы «Рай»: стандартные номера, групповые номера и банные комплексы. Бронирование не уводит в сложную форму: звоните и договаривайтесь по номеру в правом верхнем углу.
+       На сайте представлены варианты аренды жилья: отдельные комнаты, жильё для компаний и банные комплексы. Никаких сложных форм: позвоните владельцу и обсудите условия напрямую.
       </p>
     </section>
 
     <section id="included" v-reveal class="section included-section">
       <div class="section-head">
         <div>
-          <h2>Что доступно гостям на территории</h2>
+          <h2>Что есть на территории</h2>
         </div>
-        <p class="section-note">Банные зоны, бильярдная, бассейн и места для отдыха собраны рядом с размещением, чтобы гостю не приходилось искать досуг отдельно.</p>
+        <p class="section-note">Банные зоны, бильярдная, бассейн и места для отдыха находятся рядом с жильём.</p>
         <div class="included-actions" aria-label="Перемещение по доступным зонам">
           <button type="button" @click="scrollIncluded(-1)" aria-label="Назад">‹</button>
           <button type="button" @click="scrollIncluded(1)" aria-label="Вперед">›</button>
@@ -149,9 +149,9 @@ const closeLightbox = () => {
     <section id="rooms" v-reveal class="section rooms-section">
       <div class="section-head">
         <div>
-          <h2>Номера и банные комплексы</h2>
+          <h2>Жильё и банные комплексы</h2>
         </div>
-        <div class="filters" aria-label="Фильтр размещений">
+        <div class="filters" aria-label="Фильтр вариантов аренды">
           <button
             v-for="group in groups"
             :key="group"
@@ -191,19 +191,19 @@ const closeLightbox = () => {
     <section id="gallery" v-reveal class="section gallery-section">
       <div class="section-head">
         <div>
-          <h2>Фотографии отеля внутри и снаружи</h2>
+          <h2>Фотографии объекта</h2>
         </div>
       </div>
       <div class="gallery-grid">
         <button v-for="(image, index) in gallery" :key="image" type="button" @click="openLightbox(index)">
-          <img :src="image" alt="Фотография гостиницы «Рай»" />
+          <img :src="image" alt="Фотография объекта аренды жилья «Рай»" />
         </button>
       </div>
     </section>
 
     <section id="contacts" v-reveal class="section contacts">
       <div>
-        <h2>Позвоните и уточните свободный номер.</h2>
+        <h2>Позвоните и уточните условия аренды.</h2>
       </div>
       <div class="contact-panel">
         <a :href="phoneHref">{{ phone }}</a>
@@ -215,11 +215,11 @@ const closeLightbox = () => {
 
     <section id="map" v-reveal class="map-reveal">
       <div class="map-copy">
-        <h2>Гостиница «Рай» на карте</h2>
+        <h2>Аренда жилья «Рай» на карте</h2>
         <a class="gold-button" href="https://yandex.ru/maps/?text=Тетюши, Чернышевского, 48" target="_blank" rel="noreferrer">Открыть в Яндекс.Картах</a>
       </div>
       <iframe
-        title="Гостиница Рай на Яндекс Картах"
+        title="Аренда жилья Рай на Яндекс Картах"
         src="https://yandex.ru/map-widget/v1/?text=Тетюши%2C%20Чернышевского%2C%2048&z=16"
         loading="lazy"
       ></iframe>
@@ -233,7 +233,7 @@ const closeLightbox = () => {
     <ImageLightbox
       :images="gallery"
       :index="selectedImageIndex"
-      alt="Увеличенная фотография гостиницы"
+      alt="Увеличенная фотография объекта аренды жилья"
       @update:index="selectedImageIndex = $event"
       @close="closeLightbox"
     />

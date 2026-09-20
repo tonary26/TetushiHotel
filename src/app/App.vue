@@ -25,8 +25,8 @@ const goToSection = async (sectionId) => {
 <template>
   <header :class="['site-header', { 'menu-open': menuOpen }]">
     <RouterLink class="brand" to="/" @click="menuOpen = false">
-      <img src="/images/rai-logo.png" alt="Логотип гостиницы Рай" />
-      <span class="brand-name"><small>Гостиница</small><strong>Рай</strong></span>
+      <img src="/images/rai-logo.png" alt="Логотип аренды жилья Рай" />
+      <span class="brand-name"><small>Аренда жилья</small><strong>Рай</strong></span>
     </RouterLink>
 
     <button class="menu-button" type="button" aria-label="Открыть меню" @click="menuOpen = !menuOpen">
@@ -35,7 +35,7 @@ const goToSection = async (sectionId) => {
     </button>
 
     <nav :class="['main-nav', { open: menuOpen }]">
-      <a href="/#rooms" @click.prevent="goToSection('rooms')">Номера</a>
+      <a href="/#rooms" @click.prevent="goToSection('rooms')">Жильё</a>
       <a href="/#gallery" @click.prevent="goToSection('gallery')">Галерея</a>
       <a href="/#contacts" @click.prevent="goToSection('contacts')">Контакты</a>
       <a class="nav-phone" :href="phoneHref">{{ phone }}</a>
